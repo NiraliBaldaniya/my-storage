@@ -7,6 +7,11 @@ import { useNavigate } from 'react-router-dom'
 
 
 function Home() {
+
+    useEffect(() => {
+        document.title = "Home";
+    }, [])
+
     const imageInput = useRef<HTMLInputElement | null>(null)
     const [storedimages, setstoredimages] = useState<any[]>([])
     const navigate = useNavigate();
@@ -118,7 +123,6 @@ function Home() {
 
                 const fileName = row.image_url.split("/").pop() || "";
 
-
                 const folderPath = row.image_url.substring(0, row.image_url.lastIndexOf("/"));
 
 
@@ -171,15 +175,9 @@ function Home() {
 
     return (
         <>
-            <head>
-                <title>Home</title>
-            </head>
-
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-
             <div className="navbar">
-                <h1>upload image</h1>
-                <button onClick={userLogOut} >Log Out</button>
+                <h1>Upload Image</h1>
+                <button onClick={userLogOut} >Logout</button>
             </div>
 
             <div className="img-container">
@@ -199,7 +197,7 @@ function Home() {
             </div>
 
             <div className="img-info">
-                <h2>your images</h2>
+                <h2>your images({storedimages.length})</h2>
 
                 {storedimages.length > 0 ? (
 
