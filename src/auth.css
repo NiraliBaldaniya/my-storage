@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.signup-page,
+.signin-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f3f0f0;
+}
+
+.signup-box,
+.signin-box {
+    width: 450px;
+    padding: 35px;
+    background: rgb(253, 253, 253);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 40px;
+}
+
+h3 {
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 17px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #333;
+}
+
+.password-field {
+    position: relative;
+    width: 100%;
+}
+
+.password-field input {
+    width: 100%;
+    padding-right: 40px;
+}
+
+.password-field svg {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 3px;
+    background: #222;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #444;
+}
+
+.message-box {
+    border: 1px solid rgb(168, 63, 63);
+    border-radius: 2px;
+    padding: 20px;
+    font-size: 17px;
+    color: rgba(145, 8, 8, 0.925);
+    background: rgba(194, 122, 122, 0.945);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+p {
+    margin-top: 20px;
+    text-align: center;
+    color: #666;
+    font-size: 17px;
+}
+
+a {
+    color: #222;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
